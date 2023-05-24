@@ -67,7 +67,7 @@ const server = http.createServer((request, response) => {
                 .then(response => response.json())
                 .then(data => {
                     // Zpracování odpovědi z mutace
-                    console.log('Mutation result:', data);
+                    //console.log('Mutation result:', data);
 
                     response.end(`
                         <html>

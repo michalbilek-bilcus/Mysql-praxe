@@ -10,8 +10,8 @@ async function getDataFromHasura() {
                 query: `
           mutation {
             update_Test_Table_by_pk(
-              pk_columns: { id: 4 }
-              _set: { test: 5552825 }
+              pk_columns: { id: 5 }
+              _set: { test: 5 }
             ) {
               id
               test
