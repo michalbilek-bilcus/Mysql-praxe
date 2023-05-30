@@ -1,4 +1,4 @@
-async function getDataFromHasura() {
+async function doMutation() {
     try {
         const response = await fetch('http://localhost:8080/v1/graphql', {
             method: 'POST',
@@ -9,9 +9,9 @@ async function getDataFromHasura() {
             body: JSON.stringify({
                 query: `
           mutation {
-            update_Test_Table_by_pk(
-              pk_columns: { id: 5 }
-              _set: { test: 5 }
+            update_Test_Table_by_row(
+              where: { test: 1 }
+              _set: { id: 100 }
             ) {
               id
               test
@@ -28,4 +28,4 @@ async function getDataFromHasura() {
     }
 }
 
-getDataFromHasura();
+doMutation();

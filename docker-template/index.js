@@ -1,6 +1,6 @@
 const http = require('http');
 
-const hostname = '127.0.0.1';
+const hostname = '0.0.0.0';
 const port = 3000;
 const hasuraAdminSecret = 'myadminsecretkey';
 
@@ -8,7 +8,7 @@ const server = http.createServer((request, response) => {
     response.statusCode = 200;
     response.setHeader('Content-Type', 'text/html');
 
-    const graphqlEndpoint = 'http://localhost:8080/v1/graphql';
+    const graphqlEndpoint = 'http://mysql-graphql-engine-1+:8080/v1/graphql';
     const query = `
         query GetTestTable {
             Test_Table {
